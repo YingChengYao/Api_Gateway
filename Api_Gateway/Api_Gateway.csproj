@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="ocelot.json" />
+    <Content Remove="ocelot.good.json" />
+    <Content Remove="ocelot.order.json" />
   </ItemGroup>
 
   <ItemGroup>

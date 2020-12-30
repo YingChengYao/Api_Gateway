@@ -30,11 +30,18 @@ namespace Api_Gateway
             services.AddControllers();
 
             //services.AddOcelot(new ConfigurationBuilder()
-            //        .AddJsonFile("ocelot.json",false,true)
+            //        .AddJsonFile("ocelot.json", false, true)
             //        .Build())
             //        .AddConsul()
             //        .AddConfigStoredInConsul();
-            services.AddOcelot();
+
+
+            services.AddOcelot(new ConfigurationBuilder()
+                    .AddJsonFile("ocelot.json", false, true)
+                    .Build());
+
+            //services.AddOcelot()
+            //        .AddSingletonDefinedAggregator<FakeDefinedAggregator>();
 
         }
 
